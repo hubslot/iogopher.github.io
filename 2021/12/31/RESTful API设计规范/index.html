@@ -28,7 +28,7 @@
 <meta property="og:description" content="一、什么是RESTful?​    又称REST(Representational State Transfer，具象状态传输)，一种软件架构⻛ 格、设计⻛格，而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服 务器交互类的软件。其核心是面向资源，REST专⻔针对网络应用设计和开发方式，以降低 开发的复杂性，提高系统的可伸缩性。 ​    在RESTful架构中，每个网址代表一种资">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-31T11:30:58.000Z">
-<meta property="article:modified_time" content="2021-12-31T11:03:15.823Z">
+<meta property="article:modified_time" content="2021-12-31T16:16:15.285Z">
 <meta property="article:author" content="Mark Jone">
 <meta property="article:tag" content="REST API">
 <meta name="twitter:card" content="summary">
@@ -108,7 +108,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFRESTful"><span class="nav-number">1.</span> <span class="nav-text">一、什么是RESTful?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A6%82%E5%BF%B5%E5%92%8C%E5%87%86%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">二、设计概念和准则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8RESTful-API"><span class="nav-number">3.</span> <span class="nav-text">三、为什么要使用RESTful API?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.</span> <span class="nav-text">四、协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">5.</span> <span class="nav-text">五、命名规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%9F%9F%E5%90%8D"><span class="nav-number">6.</span> <span class="nav-text">六、域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%89%88%E6%9C%AC"><span class="nav-number">7.</span> <span class="nav-text">七、版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AB%E3%80%81http%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="nav-number">8.</span> <span class="nav-text">八、http请求方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E8%B7%AF%E7%94%B1-%E8%B7%AF%E5%BE%84"><span class="nav-number">9.</span> <span class="nav-text">九、路由(路径)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E8%BF%87%E6%BB%A4%E4%BF%A1%E6%81%AF-url%E4%B8%AD%E9%97%AE%E5%8F%B7%EF%BC%88-%EF%BC%89%E5%90%8E%E9%9D%A2%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">十、过滤信息(url中问号（?）后面的参数)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81-%E5%85%B6%E5%AE%83"><span class="nav-number">11.</span> <span class="nav-text">十二、 其它</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFRESTful"><span class="nav-number">1.</span> <span class="nav-text">一、什么是RESTful?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A6%82%E5%BF%B5%E5%92%8C%E5%87%86%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">二、设计概念和准则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8RESTful-API"><span class="nav-number">3.</span> <span class="nav-text">三、为什么要使用RESTful API?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.</span> <span class="nav-text">四、协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">5.</span> <span class="nav-text">五、命名规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%9F%9F%E5%90%8D"><span class="nav-number">6.</span> <span class="nav-text">六、域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%89%88%E6%9C%AC"><span class="nav-number">7.</span> <span class="nav-text">七、版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AB%E3%80%81http%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="nav-number">8.</span> <span class="nav-text">八、http请求方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E8%B7%AF%E7%94%B1-%E8%B7%AF%E5%BE%84"><span class="nav-number">9.</span> <span class="nav-text">九、路由(路径)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E8%BF%87%E6%BB%A4%E4%BF%A1%E6%81%AF-url%E4%B8%AD%E9%97%AE%E5%8F%B7%EF%BC%88-%EF%BC%89%E5%90%8E%E9%9D%A2%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">十、过滤信息(url中问号（?）后面的参数)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%BF%87%E6%BB%A4%E4%BF%A1%E6%81%AF%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">10.0.1.</span> <span class="nav-text">使用过滤信息的原因:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81-%E5%85%B6%E5%AE%83"><span class="nav-number">11.</span> <span class="nav-text">十二、 其它</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">12.</span> <span class="nav-text">十三、参考链接</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,10 +188,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-12-31 19:30:58 / 修改时间：19:03:15" itemprop="dateCreated datePublished" datetime="2021-12-31T19:30:58+08:00">2021-12-31</time>
+      <time title="创建时间：2021-12-31 19:30:58" itemprop="dateCreated datePublished" datetime="2021-12-31T19:30:58+08:00">2021-12-31</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-01-01 00:16:15" itemprop="dateModified" datetime="2022-01-01T00:16:15+08:00">2022-01-01</time>
+      </span>
 
   
 </div>
@@ -218,49 +224,62 @@
 </ul>
 <h4 id="四、协议"><a href="#四、协议" class="headerlink" title="四、协议"></a>四、协议</h4><p>​    API与用户的通信协议，一般使用HTTP协议，更安全情况下使用HTTPs。</p>
 <h4 id="五、命名规则"><a href="#五、命名规则" class="headerlink" title="五、命名规则"></a>五、命名规则</h4><p>​    URL 的命名有且只包含小写字母、下划线(<strong>_</strong>)和 数字。</p>
-<p>​    例如: <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001/hash_tags/">https://api.example.com/v1/topics/100001/hash_tags/</a></em></p>
-<h4 id="六、域名"><a href="#六、域名" class="headerlink" title="六、域名"></a>六、域名</h4><p>​    应该尽量将API部署在专用域名之下:</p>
-<p>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/">https://api.example.com</a></em></p>
-<p>​    如果确定API很简单，不会有进一步扩展，可以考虑放在主域名下:</p>
-<p>​    <em><a target="_blank" rel="noopener" href="https://example.org/api/">https://example.org/api/</a></em></p>
+<p>​    例如: <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001/hash_tags/">https://api.example.com/v1/topics/100001/hash_tags/</a></p>
+<h4 id="六、域名"><a href="#六、域名" class="headerlink" title="六、域名"></a>六、域名</h4><p>​    应该尽量将API部署在专用域名之下：</p>
+<p>​        <a target="_blank" rel="noopener" href="https://api.example.com/">https://api.example.com</a></p>
+<p>​    如果确定API很简单，不会有进一步扩展，可以考虑放在主域名下：</p>
+<p>​        <a target="_blank" rel="noopener" href="https://example.org/api/">https://example.org/api/</a></p>
 <h4 id="七、版本"><a href="#七、版本" class="headerlink" title="七、版本"></a>七、版本</h4><p>​    在每个API的URL中，应有一个版本号，以便将来服务升级后，所有版本的客户端可以正常使用，如下:</p>
-<p>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a></em><br>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/v2/topics/">https://api.example.com/v2/topics/</a></em><br>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/v3/topics/">https://api.example.com/v3/topics/</a></em></p>
-<h4 id="八、http请求方式"><a href="#八、http请求方式" class="headerlink" title="八、http请求方式"></a>八、<strong>http</strong>请求方式</h4><p>​    GET     : 读取(Read)<br>​    POST    : 新建(Create)<br>​    PUT     : 更新(Update)，全部更新<br>​    PATCH   : 更新(Update)，部分更新<br>​    DELETE  : 删除(Delete)</p>
+<p>​        <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a><br>​        <a target="_blank" rel="noopener" href="https://api.example.com/v2/topics/">https://api.example.com/v2/topics/</a><br>​        <a target="_blank" rel="noopener" href="https://api.example.com/v3/topics/">https://api.example.com/v3/topics/</a></p>
+<h4 id="八、http请求方式"><a href="#八、http请求方式" class="headerlink" title="八、http请求方式"></a>八、<strong>http</strong>请求方式</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GET</td>
+<td>读取(Read)</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>新建(Create)</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>更新(Update)，全部更新</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>更新(Update)，部分更新</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除(Delete)</td>
+</tr>
+</tbody></table>
 <h4 id="九、路由-路径"><a href="#九、路由-路径" class="headerlink" title="九、路由(路径)"></a>九、路由(路径)</h4><ul>
-<li><p>每个网址中不能有动词，只能有名词。并且应该使用复数，除非没有合适的复数形 式，如:<strong>weather</strong>。</p>
-<p><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a>, 表示所有帖子</p>
+<li><p>每个网址中不能有动词，只能有名词。并且应该使用复数，除非没有合适的复数形 式，如:<strong>weather</strong>。<br><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a>, 表示所有帖子</p>
 </li>
 <li><p>对于个体或个类名下资源，可以直接在路径上添加具体的<strong>id</strong>来表现，如下</p>
-<p><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001/info">https://api.example.com/v1/topics/100001/info</a>, 表示<em>id</em>为<em>100001</em>帖子的详情</p>
-<p><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/topics/">https://api.example.com/v1/users/12345/topics/</a>, 表示<em>id</em>为<em>12345</em>用户的所有帖子</p>
+<p><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001/info">https://api.example.com/v1/topics/100001/info</a>, 表示<em>id</em>为<em>100001</em>帖子的详情<br><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/topics/">https://api.example.com/v1/users/12345/topics/</a>, 表示<em>id</em>为<em>12345</em>用户的所有帖子</p>
 </li>
-<li><p>更多例子**[<strong>带请求方法</strong>]**</p>
-<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a></em>                  # 获取所有帖子*(<em>列表</em>)</p>
-<p> [POST] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a></em>                 # 新建帖子</p>
-<p> [PUT] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a></em>            # 更新完整帖子</p>
-<p> [PATCH] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a></em>          # 更新帖子部分信息</p>
-<p> [DELETE] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a></em>         # 删除帖子</p>
-<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/groups/1/topics/">https://api.example.com/v1/groups/1/topics/</a></em>         # 获取某组所有帖子</p>
-<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/profile">https://api.example.com/v1/users/12345/profile</a></em>      # 获取某用户资料</p>
-<p> [PUT] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/profile">https://api.example.com/v1/users/12345/profile</a></em>      # 更新某用户资料</p>
-<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/labels/">https://api.example.com/v1/users/12345/labels/</a></em>      # 获取用户所有标签</p>
+<li><p>更多例子**[<strong>带请求方法</strong>]**<br> [GET]         <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a>                            # 获取所有帖子*(<em>列表</em>)<br> [POST]      <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a>                            # 新建帖子<br> [PUT]         <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a>              # 更新完整帖子<br> [PATCH]    <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a>              # 更新帖子部分信息<br> [DELETE]   <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a>             # 删除帖子<br> [GET]         <a target="_blank" rel="noopener" href="https://api.example.com/v1/groups/1/topics/">https://api.example.com/v1/groups/1/topics/</a>          # 获取某组所有帖子<br> [GET]         <a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/profile">https://api.example.com/v1/users/12345/profile</a>      # 获取某用户资料<br> [PUT]         <a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/profile">https://api.example.com/v1/users/12345/profile</a>      # 更新某用户资料<br> [GET]         <a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/labels/">https://api.example.com/v1/users/12345/labels/</a>      # 获取用户所有标签</p>
 </li>
 </ul>
 <ul>
 <li><p>批量删除时，分两个步骤：<strong>POST-&gt;DELETE。</strong></p>
-<p>[POST] <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/recycle/">https://api.example.com/v1/topics/recycle/</a>         # 生成 recycle_id</p>
-<p>[DELETE] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/recycle/">https://api.example.com/v1/topics/recycle/</a></em>{id}   # 删除 recycle_id</p>
+<p>[POST]         <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/recycle/">https://api.example.com/v1/topics/recycle/</a>         # 生成 recycle_id<br>[DELETE]     <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/recycle/%7Bid%7D">https://api.example.com/v1/topics/recycle/{id}</a>   # 删除 recycle_id</p>
+<p>​    <strong>注意：</strong></p>
+<p>​        1, POST 的 <em>body</em> 包括了所有要删除的实体 <em>id</em> 列表，比如 uid…、vehicle_id…</p>
+<p>​        2, POST 返回代码全局唯一的<em>recycle_id</em>（建议：<em>uid+timestamp</em>，做混合 <em>16</em> 进制）    </p>
 </li>
 </ul>
-<p>​    <strong>注意：</strong></p>
-<p>​        <em>1, POST</em> 的 <em>body</em> 包括了所有要删除的实体 <em>id</em> 列表，比如 <em>uid…</em>、<em>vehicle_id…</em></p>
-<p>​        <em>2, POST</em> 返回代码全局唯一的<em>recycle_id</em>（建议：<em>uid+timestamp</em>，做混合 <em>16</em> 进制）    </p>
-<h4 id="十、过滤信息-url中问号（-）后面的参数"><a href="#十、过滤信息-url中问号（-）后面的参数" class="headerlink" title="十、过滤信息(url中问号（?）后面的参数)"></a>十、过滤信息(url中问号（?）后面的参数)</h4><p>​    使用过滤信息的原因:</p>
-<p>​    <strong>原因1</strong>：单一的 url 路径不能表现出所有的场景，起到了补充作用；</p>
-<p>​          <em>?limit=10</em>                # 指定返回记录的数量<br>​          <em>?offset=10</em>               # 指定返回记录的开始位置。<br>​          <em>?page=2&amp;per_page=100</em>     # 指定第几页，以及每页的记录数。<br>​          <em>?sortby=name&amp;order=asc</em>   # 指定返回结果按哪个属性排序，以及排序顺序。<br>​          <em>?animal_type_id=1</em>        # 指定筛选条件</p>
-<p>​    <strong>原因2</strong>：避免多级 URL，不利于扩展，语义也不明确，理解困难；</p>
-<p>​        不好的做法（即多级URL)：GET /authors/12/categories/2  # 含义不清楚</p>
-<p>​        正确做法是：GET /authors/12?categories=2</p>
+<h4 id="十、过滤信息-url中问号（-）后面的参数"><a href="#十、过滤信息-url中问号（-）后面的参数" class="headerlink" title="十、过滤信息(url中问号（?）后面的参数)"></a>十、过滤信息(url中问号（?）后面的参数)</h4><h6 id="使用过滤信息的原因"><a href="#使用过滤信息的原因" class="headerlink" title="使用过滤信息的原因:"></a>使用过滤信息的原因:</h6><p>​        <strong>原因1</strong>：单一的 url 路径不能表现出所有的场景，起到了补充作用；</p>
+<p>​           ?limit=10                                           # 指定返回记录的数量<br>           ?offset=10                                        # 指定返回记录的开始位置。<br>           ?page=2&amp;per_page=100             # 指定第几页，以及每页的记录数。<br>           ?sortby=name&amp;order=asc           # 指定返回结果按哪个属性排序，以及排序顺序。<br>           ?animal_type_id=1                         # 指定筛选条件</p>
+<p>​        <strong>原因2</strong>：避免多级 URL，不利于扩展，语义也不明确，理解困难；</p>
+<p>​            不建议做法：GET /authors/12/categories/2          # 多级URL，含义不清楚<br>​            正确的做法：GET /authors/12?categories=2</p>
 <p><strong>十一、状态码</strong></p>
 <p>​    HTTP 状态码就是一个三位数，分成五个类别：</p>
 <table>
@@ -293,20 +312,10 @@
 <p>200<strong>状态码响应的单个资源数据</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;code&quot;</span>:<span class="number">0</span>,</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>:<span class="string">&quot;success&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;data&quot;</span>:&#123;</span><br><span class="line">        <span class="attr">&quot;tid&quot;</span>:<span class="number">100001</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="十二、-其它"><a href="#十二、-其它" class="headerlink" title="十二、 其它"></a>十二、 其它</h4><ol>
-<li>API的身份认证应该使用OAuth 2.0框架;</li>
-<li>服务器返回的数据格式，应该尽量使用JSON，避免使用XML和ProtoBuffer;</li>
-</ol>
-<p>十三、参考链接</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南 - 阮一峰的网络日志</a></li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/RESTful/4406165">RESTful_百度百科</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html">RESTful API 最佳实践</a></li>
-<li><a target="_blank" rel="noopener" href="https://codeplanet.io/principles-good-restful-api-design/">Principles of good RESTful API Design</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/API-design-guide/API-design-guide-02-%E9%9D%A2%E5%90%91%E8%B5%84%E6%BA%90%E7%9A%84%E8%AE%BE%E8%AE%A1.md">Google API Design Guide (谷歌API设计指南)中文版</a></li>
-<li><a target="_blank" rel="noopener" href="https://godruoyi.com/posts/the-resetful-api-design-specification">RESETful API 设计规范</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/aisuhua/restful-api-design-references">restful-api-design-references</a></li>
-</ol>
+<h4 id="十二、-其它"><a href="#十二、-其它" class="headerlink" title="十二、 其它"></a>十二、 其它</h4><pre><code>    1. API的身份认证应该使用OAuth 2.0框架;
+      2. 服务器返回的数据格式，应该尽量使用JSON，避免使用XML和ProtoBuffer;
+</code></pre>
+<h4 id="十三、参考链接"><a href="#十三、参考链接" class="headerlink" title="十三、参考链接"></a>十三、参考链接</h4><p>​        <a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南 - 阮一峰的网络日志</a><br>​        <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/RESTful/4406165">RESTful_百度百科</a><br>​        <a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html">RESTful API 最佳实践</a><br>​        <a target="_blank" rel="noopener" href="https://codeplanet.io/principles-good-restful-api-design/">Principles of good RESTful API Design</a><br>​        <a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/API-design-guide/API-design-guide-02-%E9%9D%A2%E5%90%91%E8%B5%84%E6%BA%90%E7%9A%84%E8%AE%BE%E8%AE%A1.md">Google API Design Guide (谷歌API设计指南)中文版</a><br>​        <a target="_blank" rel="noopener" href="https://godruoyi.com/posts/the-resetful-api-design-specification">RESETful API 设计规范</a><br>​        <a target="_blank" rel="noopener" href="https://github.com/aisuhua/restful-api-design-references">restful-api-design-references</a></p>
 
     </div>
 
@@ -339,7 +348,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
