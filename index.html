@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>iogopher&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="iogopher&#39;s blog">
+<meta property="og:url" content="https://iogopher.github.io/index.html">
+<meta property="og:site_name" content="iogopher&#39;s blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Mark Jone">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="iogopher's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">iogopher&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://iogopher.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-RESTful API设计规范" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/31/RESTful%20API%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" class="article-date">
+  <time class="dt-published" datetime="2021-12-31T11:30:58.000Z" itemprop="datePublished">2021-12-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/31/RESTful%20API%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/">RESTful API设计规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="一、什么是RESTful"><a href="#一、什么是RESTful" class="headerlink" title="一、什么是RESTful?"></a>一、什么是<strong>RESTful</strong>?</h4><p>​    又称REST(<strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer，具象状态传输)，一种软件架构⻛ 格、设计⻛格，而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服 务器交互类的软件。其核心是面向资源，REST专⻔针对网络应用设计和开发方式，以降低 开发的复杂性，提高系统的可伸缩性。</p>
+<p>​    在RESTful架构中，每个网址代表一种资源(<strong>resource</strong>)，所以网址中不能有动词， 只能有名词。一般来说，数据库中的表都是同种记录的”集合”(collection)，所以<strong>API</strong>中的 名词也应该使用复数，除非没有合适的复数形式，如:weather。</p>
+<h4 id="二、设计概念和准则"><a href="#二、设计概念和准则" class="headerlink" title="二、设计概念和准则"></a>二、设计概念和准则</h4><ul>
+<li>网络上的所有事物都可以被抽象为<strong>资源(resource)</strong>;</li>
+<li>每个资源都有唯一的资源标识(resource identifier)，资源的操作不改变资源标识;</li>
+<li>所有的操作都是<strong>无状态</strong>的;</li>
+<li>分层系统，表示组件无法了解它与之交互的中间层以外的组件。通过将系统知识限制在单个层，可以限制整个系统的复杂性，促进了底层的独立性。</li>
+</ul>
+<h4 id="三、为什么要使用RESTful-API"><a href="#三、为什么要使用RESTful-API" class="headerlink" title="三、为什么要使用RESTful API?"></a>三、为什么要使用<strong>RESTful API</strong>?</h4><ul>
+<li>面向资源(URI)，具有解释性;</li>
+<li>行为(GET/POST/PUT/PATCH/DELETE)与资源(URI)分离，更加轻量;</li>
+<li>数据描述简单，使用JSON、XML、ProtoBuffer 即可全覆盖，主要使用JSON;</li>
+</ul>
+<h4 id="四、协议"><a href="#四、协议" class="headerlink" title="四、协议"></a>四、协议</h4><p>​    API与用户的通信协议，一般使用HTTP协议，更安全情况下使用HTTPs。</p>
+<h4 id="五、命名规则"><a href="#五、命名规则" class="headerlink" title="五、命名规则"></a>五、命名规则</h4><p>​    URL 的命名有且只包含小写字母、下划线(<strong>_</strong>)和 数字。</p>
+<p>​    例如: <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001/hash_tags/">https://api.example.com/v1/topics/100001/hash_tags/</a></em></p>
+<h4 id="六、域名"><a href="#六、域名" class="headerlink" title="六、域名"></a>六、域名</h4><p>​    应该尽量将API部署在专用域名之下:</p>
+<p>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/">https://api.example.com</a></em></p>
+<p>​    如果确定API很简单，不会有进一步扩展，可以考虑放在主域名下:</p>
+<p>​    <em><a target="_blank" rel="noopener" href="https://example.org/api/">https://example.org/api/</a></em></p>
+<h4 id="七、版本"><a href="#七、版本" class="headerlink" title="七、版本"></a>七、版本</h4><p>​    在每个API的URL中，应有一个版本号，以便将来服务升级后，所有版本的客户端可以正常使用，如下:</p>
+<p>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a></em><br>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/v2/topics/">https://api.example.com/v2/topics/</a></em><br>​    <em><a target="_blank" rel="noopener" href="https://api.example.com/v3/topics/">https://api.example.com/v3/topics/</a></em></p>
+<h4 id="八、http请求方式"><a href="#八、http请求方式" class="headerlink" title="八、http请求方式"></a>八、<strong>http</strong>请求方式</h4><p>​    GET     : 读取(Read)<br>​    POST    : 新建(Create)<br>​    PUT     : 更新(Update)，全部更新<br>​    PATCH   : 更新(Update)，部分更新<br>​    DELETE  : 删除(Delete)</p>
+<h4 id="九、路由-路径"><a href="#九、路由-路径" class="headerlink" title="九、路由(路径)"></a>九、路由(路径)</h4><ul>
+<li><p>每个网址中不能有动词，只能有名词。并且应该使用复数，除非没有合适的复数形 式，如:<strong>weather</strong>。</p>
+<p><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a>, 表示所有帖子</p>
+</li>
+<li><p>对于个体或个类名下资源，可以直接在路径上添加具体的<strong>id</strong>来表现，如下</p>
+<p><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001/info">https://api.example.com/v1/topics/100001/info</a>, 表示<em>id</em>为<em>100001</em>帖子的详情</p>
+<p><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/topics/">https://api.example.com/v1/users/12345/topics/</a>, 表示<em>id</em>为<em>12345</em>用户的所有帖子</p>
+</li>
+<li><p>更多例子**[<strong>带请求方法</strong>]**</p>
+<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a></em>                  # 获取所有帖子*(<em>列表</em>)</p>
+<p> [POST] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/">https://api.example.com/v1/topics/</a></em>                 # 新建帖子</p>
+<p> [PUT] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a></em>            # 更新完整帖子</p>
+<p> [PATCH] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a></em>          # 更新帖子部分信息</p>
+<p> [DELETE] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/100001">https://api.example.com/v1/topics/100001</a></em>         # 删除帖子</p>
+<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/groups/1/topics/">https://api.example.com/v1/groups/1/topics/</a></em>         # 获取某组所有帖子</p>
+<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/profile">https://api.example.com/v1/users/12345/profile</a></em>      # 获取某用户资料</p>
+<p> [PUT] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/profile">https://api.example.com/v1/users/12345/profile</a></em>      # 更新某用户资料</p>
+<p> [GET] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/users/12345/labels/">https://api.example.com/v1/users/12345/labels/</a></em>      # 获取用户所有标签</p>
+</li>
+</ul>
+<ul>
+<li><p>批量删除时，分两个步骤：<strong>POST-&gt;DELETE。</strong></p>
+<p>[POST] <a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/recycle/">https://api.example.com/v1/topics/recycle/</a>         # 生成 recycle_id</p>
+<p>[DELETE] <em><a target="_blank" rel="noopener" href="https://api.example.com/v1/topics/recycle/">https://api.example.com/v1/topics/recycle/</a></em>{id}   # 删除 recycle_id</p>
+</li>
+</ul>
+<p>​    <strong>注意：</strong></p>
+<p>​        <em>1, POST</em> 的 <em>body</em> 包括了所有要删除的实体 <em>id</em> 列表，比如 <em>uid…</em>、<em>vehicle_id…</em></p>
+<p>​        <em>2, POST</em> 返回代码全局唯一的<em>recycle_id</em>（建议：<em>uid+timestamp</em>，做混合 <em>16</em> 进制）    </p>
+<h4 id="十、过滤信息-url中问号（-）后面的参数"><a href="#十、过滤信息-url中问号（-）后面的参数" class="headerlink" title="十、过滤信息(url中问号（?）后面的参数)"></a>十、过滤信息(url中问号（?）后面的参数)</h4><p>​    使用过滤信息的原因:</p>
+<p>​    <strong>原因1</strong>：单一的 url 路径不能表现出所有的场景，起到了补充作用；</p>
+<p>​          <em>?limit=10</em>                # 指定返回记录的数量<br>​          <em>?offset=10</em>               # 指定返回记录的开始位置。<br>​          <em>?page=2&amp;per_page=100</em>     # 指定第几页，以及每页的记录数。<br>​          <em>?sortby=name&amp;order=asc</em>   # 指定返回结果按哪个属性排序，以及排序顺序。<br>​          <em>?animal_type_id=1</em>        # 指定筛选条件</p>
+<p>​    <strong>原因2</strong>：避免多级 URL，不利于扩展，语义也不明确，理解困难；</p>
+<p>​        不好的做法（即多级URL)：GET /authors/12/categories/2  # 含义不清楚</p>
+<p>​        正确做法是：GET /authors/12?categories=2</p>
+<p><strong>十一、状态码</strong></p>
+<p>​    HTTP 状态码就是一个三位数，分成五个类别：</p>
+<table>
+<thead>
+<tr>
+<th>1XX</th>
+<th>相关信息，不使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2xx</td>
+<td>操作成功</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>重定向</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>客户端错误</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>服务器错误</td>
+</tr>
+</tbody></table>
+<p>说明：除非是 <strong>500</strong> <strong>和</strong> <strong>404</strong> 错误，<strong>大部分使用</strong> <strong>200</strong> <strong>状态码</strong>即可，200状态的返回数据如下：</p>
+<p>200<strong>状态码响应的列表资源数据</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;code&quot;</span>:<span class="number">0</span>,</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>:<span class="string">&quot;success&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;data&quot;</span>:&#123;</span><br><span class="line">        <span class="attr">&quot;list&quot;</span>:[</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;tid&quot;</span>:<span class="number">100001</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;tid&quot;</span>:<span class="number">100002</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>200<strong>状态码响应的单个资源数据</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;code&quot;</span>:<span class="number">0</span>,</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>:<span class="string">&quot;success&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;data&quot;</span>:&#123;</span><br><span class="line">        <span class="attr">&quot;tid&quot;</span>:<span class="number">100001</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="十二、-其它"><a href="#十二、-其它" class="headerlink" title="十二、 其它"></a>十二、 其它</h4><ol>
+<li>API的身份认证应该使用OAuth 2.0框架;</li>
+<li>服务器返回的数据格式，应该尽量使用JSON，避免使用XML和ProtoBuffer;</li>
+</ol>
+<p>十三、参考链接</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API 设计指南 - 阮一峰的网络日志</a></li>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/RESTful/4406165">RESTful_百度百科</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html">RESTful API 最佳实践</a></li>
+<li><a target="_blank" rel="noopener" href="https://codeplanet.io/principles-good-restful-api-design/">Principles of good RESTful API Design</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/API-design-guide/API-design-guide-02-%E9%9D%A2%E5%90%91%E8%B5%84%E6%BA%90%E7%9A%84%E8%AE%BE%E8%AE%A1.md">Google API Design Guide (谷歌API设计指南)中文版</a></li>
+<li><a target="_blank" rel="noopener" href="https://godruoyi.com/posts/the-resetful-api-design-specification">RESETful API 设计规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/aisuhua/restful-api-design-references">restful-api-design-references</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://iogopher.github.io/2021/12/31/RESTful%20API%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" data-id="ckxub5xnb0000x51mftw20r0m" data-title="RESTful API设计规范" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/REST-API/" rel="tag">REST API</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/REST-API/" rel="tag">REST API</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/REST-API/" style="font-size: 10px;">REST API</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/12/31/RESTful%20API%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/">RESTful API设计规范</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Mark Jone<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
